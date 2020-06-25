@@ -4,14 +4,22 @@
  * and open the template in the editor.
  */
 package Principal;
-
+import Productos.VehiculosAereos;
+import Productos.SuperVehiculos;
 /**
  *
  * @author giovani
  */
 public class Manejo {
-    public static void main(String[] args){
     
+
+    public static void main(String[] args){
+        SuperVehiculos m2 = new SuperVehiculos();
+        
+    VehiculosAereos pp = new VehiculosAereos();
+    pp.Boeing();
+
+    System.out.println(pp.arreglo[0]);
     
     }
 }
