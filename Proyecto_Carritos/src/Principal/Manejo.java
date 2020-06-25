@@ -20,6 +20,7 @@ public class Manejo {
     pp.Boeing();
 
     System.out.println(pp.arreglo[0]);
+    System.out.println("de nada");
     
     }
 }
