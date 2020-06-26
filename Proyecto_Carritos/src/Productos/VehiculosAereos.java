@@ -30,7 +30,7 @@ public class VehiculosAereos extends SuperVehiculos{
     
       private void iconA5AmphibiousLightSport(){
         arreglo[0] = new VehiculosAereos();
-        arreglo[0].setNombre("Boeing");
+        arreglo[0].setNombre("Icon A5 Amphibious Light Sport");
         arreglo[0].setCC(3500);
         arreglo[0].setCilindros(10);
         arreglo[0].setCombustible("Gasolina");

@@ -7,6 +7,8 @@ package Principal;
 import Productos.VehiculosAereos;
 import Productos.SuperVehiculos;
 import Productos.VehiculosMaritimos;
+import Productos.VehiculosTerrestres;
+import Datos.Orden;
 /**
  *
  * @author giovani
@@ -25,7 +27,33 @@ public class Manejo {
     MM.inicializador();
     MM.imprimirTodosMaritimos();
     
+    VehiculosTerrestres TT = new VehiculosTerrestres();
+    TT.inicializador();
+    TT.imprimirTodosTerrestres();
+    
+    TT.getCamaroSS();
     System.out.println("de nada");
     
+    Orden DD = new Orden();
+    DD.addToOrder(AA.getCessnaSkycatcher());
+    DD.addToOrder(AA.getIconA5AmphibiousLightSport());
+    DD.addToOrder(TT.getDodgeChallenger());
+    DD.addToOrder(MM.getPrincess30m());
+    DD.addToOrder(MM.getPrincess30m());
+    DD.addToOrder(MM.getPrincess30m());
+    DD.addToOrder(MM.getPrincess30m());
+    DD.addToOrder(MM.getPrincess30m());
+    DD.addToOrder(MM.getPrincess30m());
+    DD.addToOrder(MM.getPrincess30m());
+      DD.addToOrder(MM.getPrincess30m());
+        DD.addToOrder(MM.getPrincess30m());
+    System.out.println("RESULTADO DE LA ORDEN");
+    System.out.println("RESULTADO DE LA ORDEN");
+    System.out.println("RESULTADO DE LA ORDEN");
+    
+    DD.getOrder();
+    
+    //System.out.println();
+    //DD.fibonacci(5);
     }
 }

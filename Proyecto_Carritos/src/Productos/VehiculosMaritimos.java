@@ -81,4 +81,11 @@ public class VehiculosMaritimos extends SuperVehiculos{
     public VehiculosMaritimos getPrincess30m(){
     return arreglo[2];
     }
+    
+    @Override
+    public String toString(){
+    
+    return "\nNumero de Habitaciones: " + this.getHabitaciones()
+            + super.toString();
+    }
 }
