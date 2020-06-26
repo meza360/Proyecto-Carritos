@@ -32,7 +32,7 @@ public class SuperVehiculos {
     
     }
     
-    public void setCC(int cc){
+    protected void setCC(int cc){
         this.cc = cc;
     }
     public void setPrecio(double precio){

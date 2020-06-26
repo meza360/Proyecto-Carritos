@@ -9,6 +9,9 @@ package Productos;
  *
  * @author giovani
  */
-public class VehiculosTerrestres {
+public class VehiculosTerrestres extends SuperVehiculos{
+    public VehiculosTerrestres(){}
+    
+    private VehiculosTerrestres arreglo[] = new VehiculosTerrestres[3];
     
 }

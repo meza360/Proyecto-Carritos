@@ -6,6 +6,7 @@
 package Principal;
 import Productos.VehiculosAereos;
 import Productos.SuperVehiculos;
+import Productos.VehiculosMaritimos;
 /**
  *
  * @author giovani
@@ -14,12 +15,16 @@ public class Manejo {
     
 
     public static void main(String[] args){
-        SuperVehiculos m2 = new SuperVehiculos();
+   
         
-    VehiculosAereos pp = new VehiculosAereos();
-    pp.Boeing();
+    VehiculosAereos AA = new VehiculosAereos();
+    AA.inicializador();
+    AA.imprimeTodosAereos();
 
-    System.out.println(pp.arreglo[0]);
+    VehiculosMaritimos MM = new VehiculosMaritimos();
+    MM.inicializador();
+    MM.imprimirTodosMaritimos();
+    
     System.out.println("de nada");
     
     }
