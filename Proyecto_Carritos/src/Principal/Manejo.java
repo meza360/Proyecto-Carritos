@@ -8,7 +8,10 @@ import Productos.VehiculosAereos;
 import Productos.SuperVehiculos;
 import Productos.VehiculosMaritimos;
 import Productos.VehiculosTerrestres;
+import Datos.Factura;
+import Datos.Clientes;
 import Datos.Orden;
+
 /**
  *
  * @author giovani
@@ -18,6 +21,9 @@ public class Manejo {
 
     public static void main(String[] args){
    
+   
+        Factura FF = new Factura();
+        Clientes CC = new Clientes();
         
     VehiculosAereos AA = new VehiculosAereos();
     AA.inicializador();
@@ -35,25 +41,30 @@ public class Manejo {
     System.out.println("de nada");
     
     Orden DD = new Orden();
-    DD.addToOrder(AA.getCessnaSkycatcher());
-    DD.addToOrder(AA.getIconA5AmphibiousLightSport());
+    
     DD.addToOrder(TT.getDodgeChallenger());
-    DD.addToOrder(MM.getPrincess30m());
-    DD.addToOrder(MM.getPrincess30m());
-    DD.addToOrder(MM.getPrincess30m());
-    DD.addToOrder(MM.getPrincess30m());
-    DD.addToOrder(MM.getPrincess30m());
-    DD.addToOrder(MM.getPrincess30m());
-    DD.addToOrder(MM.getPrincess30m());
-      DD.addToOrder(MM.getPrincess30m());
-        DD.addToOrder(MM.getPrincess30m());
-    System.out.println("RESULTADO DE LA ORDEN");
-    System.out.println("RESULTADO DE LA ORDEN");
-    System.out.println("RESULTADO DE LA ORDEN");
+    DD.addToOrder(AA.getCessnaTTx());
+    //DD.getOrder();
+    FF.setNombre("Grijalva");
+    FF.setTelefono(54855454);
+    FF.setNIT(21512122);
+    FF.setLugar("Guatemala");
     
-    DD.getOrder();
-    
+   
+    System.out.print(FF);
+    System.out.println(DD.toString());
     //System.out.println();
     //DD.fibonacci(5);
+    
+    
+    while(true){
+    System.out.println("Bienvenido");
+    System.out.println("Selecciona una opcion para continuar");
+    System.out.println("");
+    
+    
+        
+    }
+    
     }
 }

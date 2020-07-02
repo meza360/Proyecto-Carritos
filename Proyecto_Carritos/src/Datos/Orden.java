@@ -23,18 +23,13 @@ public class Orden{
         if (cont != 8) {
         orden[cont] = vehiculo;    
         ++cont;
-        
         }
         else{
             System.out.println("Limite de productos alcanzado");
         }
         }catch(ArrayIndexOutOfBoundsException es){
-            
         System.out.println("Error en la orden" + es);
-        
-        }
-        
-            
+        }       
     }
     
     public SuperVehiculos getOrder(){
@@ -47,29 +42,25 @@ public class Orden{
         else
         return null;
         }catch(RuntimeException es){
+            System.out.println("Error en el proceso: ### " + es);
         return null;
         }
        
     }
     
-    
-    public int fibonacci(int n){
-    if(n != 0){
-        if (n == 1) {
-            
-            System.out.print(n);
-            System.out.print(" = "+cont2);
-            return 1;
+    @Override
+    public String toString(){
+     try{
+         if (cont >= 0) {
+            System.out.println(orden[cont]);
+            cont--;
+            return toString();      
+        } 
+        else
+        return null;
+        }catch(RuntimeException es){
+            System.out.println("Error en el proceso: ### " + es);
+        return null;
         }
-        else{
-        System.out.print(n + "*");
-        cont2 = cont2 * n;
-        return n * fibonacci(n-1);
-        }
-        }
-    else
-    { 
-    return 1;
-    }
     }
 }
