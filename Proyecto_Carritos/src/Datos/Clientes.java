@@ -10,5 +10,55 @@ package Datos;
  * @author giovani
  */
 public class Clientes {
-    public Clientes(){}
+    private String nombre;
+    private String lugar;
+    private int nit;
+    private int telefono;
+    
+    public Clientes(){
+    this.nombre = nombre;
+    this.lugar = lugar;
+    this.nit = nit;
+    this.telefono = telefono;
+    }
+    
+    
+    
+    public void setNombre(String nombre){
+    this.nombre = nombre;
+    }
+    public String getNombre(){
+    return this.nombre;
+    }
+    
+    public void setLugar(String direccion){
+    this.lugar = direccion;
+    }
+    public String getLugar(){
+    return lugar;
+    }
+    
+    public void setNIT(int nit){
+    this.nit = nit;
+    }
+    
+    public int getNIT(){
+    return nit;
+    }
+    
+    public void setTelefono(int Telefono){
+    this.telefono = Telefono;
+    }
+    public int getTelefono(){
+    return telefono;
+    }
+    
+    @Override
+    public String toString(){
+    return "\nNombre: " + this.getNombre()
+            + "\nTelefono: " + this.getTelefono()
+            + "\nNIT: " + this.getNIT()
+            + "\nDireccion: " + this.getLugar();
+    }
+
 }
