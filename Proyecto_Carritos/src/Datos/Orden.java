@@ -24,15 +24,14 @@ public class Orden{
         if (cont != 8) {
         orden[cont] = vehiculo;    
         ++cont;
-        
         }
         else{
             System.out.println("Limite de productos alcanzado");
             cont = 8;
         }
-        }catch(ArrayIndexOutOfBoundsException es){   
+        }catch(ArrayIndexOutOfBoundsException es){
         System.out.println("Error en la orden" + es);
-        }     
+        }       
     }
     
     public SuperVehiculos getOrder(){
@@ -46,6 +45,7 @@ public class Orden{
         else
         return null;
         }catch(RuntimeException es){
+            System.out.println("Error en el proceso: ### " + es);
         return null;
         }  
     }
@@ -62,5 +62,20 @@ public class Orden{
         }  
     }
     
+    @Override
+    public String toString(){
+     try{
+         if (cont >= 0) {
+            System.out.println(orden[cont]);
+            cont--;
+            return toString();      
+        } 
+        else
+        return null;
+        }catch(RuntimeException es){
+            System.out.println("Error en el proceso: ### " + es);
+        return null;
+        }
+    }
     
 }
