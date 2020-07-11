@@ -59,24 +59,5 @@ public class Manejo {
     System.out.println("RESULTADO DE LA ORDEN");*/
     System.out.println("RESULTADO DE LA ORDEN");
     
-    try{
-    
-   DD.getFactura();
-    
-    }catch(RuntimeException ex){ex.printStackTrace();}
-    
-    
-    /*
-    while(true){
-    System.out.println("Bienvenido");
-    System.out.println("Selecciona una opcion para continuar");
-    System.out.println("");
-    }
-    */
-    
-        
-    
-    
-
     }
 }

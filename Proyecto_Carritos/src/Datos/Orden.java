@@ -78,4 +78,19 @@ public class Orden{
         }
     }
     
+    @Override
+    public String toString(){
+     try{
+         if (cont >= 0) {
+            System.out.println(orden[cont]);
+            cont--;
+            return toString();      
+        } 
+        else
+        return null;
+        }catch(RuntimeException es){
+            System.out.println("Error en el proceso: ### " + es);
+        return null;
+        }
+    }
 }
