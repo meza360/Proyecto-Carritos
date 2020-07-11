@@ -43,10 +43,11 @@ public class Manejo {
     Orden DD = new Orden();
     
     DD.addToOrder(TT.getDodgeChallenger());
+    DD.addToOrder(MM.getPrincess30m());
+    DD.addToOrder(MM.getPrincess30m());
    /* 
     
-    DD.addToOrder(MM.getPrincess30m());
-    DD.addToOrder(MM.getPrincess30m());
+    
     DD.addToOrder(MM.getPrincess30m());
     DD.addToOrder(MM.getPrincess30m());
     DD.addToOrder(MM.getPrincess30m());
@@ -57,10 +58,9 @@ public class Manejo {
     System.out.println("RESULTADO DE LA ORDEN");
     System.out.println("RESULTADO DE LA ORDEN");*/
     System.out.println("RESULTADO DE LA ORDEN");
-    Factura FF = new Factura();
     
     try{
-    //FF.agregarFactura(MM.getBenetti122());
+    
    DD.getFactura();
     
     }catch(RuntimeException ex){ex.printStackTrace();}
