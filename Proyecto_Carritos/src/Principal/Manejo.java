@@ -45,19 +45,13 @@ public class Manejo {
     DD.addToOrder(TT.getDodgeChallenger());
     DD.addToOrder(MM.getPrincess30m());
     DD.addToOrder(MM.getPrincess30m());
-   /* 
-    
-    
-    DD.addToOrder(MM.getPrincess30m());
-    DD.addToOrder(MM.getPrincess30m());
-    DD.addToOrder(MM.getPrincess30m());
-    DD.addToOrder(MM.getPrincess30m());
-    DD.addToOrder(MM.getPrincess30m());
-      DD.addToOrder(MM.getPrincess30m());
-        DD.addToOrder(MM.getPrincess30m());
-    System.out.println("RESULTADO DE LA ORDEN");
-    System.out.println("RESULTADO DE LA ORDEN");*/
+  
     System.out.println("RESULTADO DE LA ORDEN");
     
+    try{
+        DD.getFactura();
+    }catch(RuntimeException ex){
+    ex.printStackTrace();
+    }
     }
 }
