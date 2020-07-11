@@ -65,12 +65,6 @@ public class Manejo {
     
     }catch(RuntimeException ex){ex.printStackTrace();}
     
-
-   
-    System.out.print(FF);
-    System.out.println(DD.toString());
-    //System.out.println();
-    //DD.fibonacci(5);
     
     /*
     while(true){
