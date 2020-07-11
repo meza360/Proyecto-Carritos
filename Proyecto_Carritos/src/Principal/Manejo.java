@@ -45,6 +45,7 @@ public class Manejo {
     DD.addToOrder(TT.getDodgeChallenger());
     DD.addToOrder(MM.getPrincess30m());
     DD.addToOrder(MM.getPrincess30m());
+    DD.addToOrder(AA.getCessnaTTx());
   
     System.out.println("RESULTADO DE LA ORDEN");
     
