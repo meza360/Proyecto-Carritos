@@ -9,6 +9,7 @@ import Productos.SuperVehiculos;
 import Productos.VehiculosMaritimos;
 import Productos.VehiculosTerrestres;
 import Datos.Orden;
+import Datos.*;
 /**
  *
  * @author giovani
@@ -38,6 +39,8 @@ public class Manejo {
     DD.addToOrder(AA.getCessnaSkycatcher());
     DD.addToOrder(AA.getIconA5AmphibiousLightSport());
     DD.addToOrder(TT.getDodgeChallenger());
+   /* 
+    
     DD.addToOrder(MM.getPrincess30m());
     DD.addToOrder(MM.getPrincess30m());
     DD.addToOrder(MM.getPrincess30m());
@@ -48,12 +51,18 @@ public class Manejo {
       DD.addToOrder(MM.getPrincess30m());
         DD.addToOrder(MM.getPrincess30m());
     System.out.println("RESULTADO DE LA ORDEN");
+    System.out.println("RESULTADO DE LA ORDEN");*/
     System.out.println("RESULTADO DE LA ORDEN");
-    System.out.println("RESULTADO DE LA ORDEN");
+    Factura FF = new Factura();
+    
+    try{
+    //FF.agregarFactura(MM.getBenetti122());
+    DD.getFactura();
+    
+    }catch(RuntimeException ex){ex.printStackTrace();}
     
     DD.getOrder();
     
-    //System.out.println();
-    //DD.fibonacci(5);
+ 
     }
 }

@@ -7,13 +7,14 @@ package Datos;
 import Productos.SuperVehiculos;
 import Productos.VehiculosAereos;
 import Productos.VehiculosMaritimos;
+import Datos.*;
 /**
  *
  * @author giovani
  */
 public class Orden{
     public Orden(){}
-  
+    private Factura FF = new Factura();
     private SuperVehiculos orden[] = new SuperVehiculos[9];
     protected int cont = 0;
     protected int cont2 = 1;
@@ -27,49 +28,39 @@ public class Orden{
         }
         else{
             System.out.println("Limite de productos alcanzado");
+            cont = 8;
         }
-        }catch(ArrayIndexOutOfBoundsException es){
-            
+        }catch(ArrayIndexOutOfBoundsException es){   
         System.out.println("Error en la orden" + es);
-        
-        }
-        
-            
+        }     
     }
     
     public SuperVehiculos getOrder(){
         try{
          if (cont >= 0) {
+             cont--;
             System.out.println(orden[cont]);
-            cont--;
+            
             return getOrder();      
         } 
         else
         return null;
         }catch(RuntimeException es){
         return null;
-        }
-       
+        }  
+    }
+    
+     public void getFactura(){
+        try{
+            for(SuperVehiculos producto:orden){
+                if(producto != null)
+                FF.agregarFactura(producto);
+            }
+        
+        }catch(RuntimeException es){
+        
+        }  
     }
     
     
-    public int fibonacci(int n){
-    if(n != 0){
-        if (n == 1) {
-            
-            System.out.print(n);
-            System.out.print(" = "+cont2);
-            return 1;
-        }
-        else{
-        System.out.print(n + "*");
-        cont2 = cont2 * n;
-        return n * fibonacci(n-1);
-        }
-        }
-    else
-    { 
-    return 1;
-    }
-    }
 }

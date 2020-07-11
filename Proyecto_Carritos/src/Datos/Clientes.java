@@ -10,5 +10,5 @@ package Datos;
  * @author giovani
  */
 public class Clientes {
-    
+    public Clientes(){}
 }
