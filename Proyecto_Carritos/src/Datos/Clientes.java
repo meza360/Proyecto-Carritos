@@ -10,19 +10,18 @@ package Datos;
  * @author giovani
  */
 public class Clientes {
+    //
     private String nombre;
     private String lugar;
     private int nit;
     private int telefono;
-    
+    //constructor 
     public Clientes(){
     this.nombre = nombre;
     this.lugar = lugar;
     this.nit = nit;
     this.telefono = telefono;
     }
-    
-    
     
     public void setNombre(String nombre){
     this.nombre = nombre;
@@ -52,7 +51,11 @@ public class Clientes {
     public int getTelefono(){
     return telefono;
     }
-    
+    /**
+    *toString method has been override 
+    *so there's no need to make extra parse on info
+    *to get it printed as text on any call
+    */
     @Override
     public String toString(){
     return "\nNombre: " + this.getNombre()

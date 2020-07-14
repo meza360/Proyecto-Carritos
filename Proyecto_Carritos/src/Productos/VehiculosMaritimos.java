@@ -85,7 +85,7 @@ public class VehiculosMaritimos extends SuperVehiculos{
     @Override
     public String toString(){
     
-    return "\nNumero de Habitaciones: " + this.getHabitaciones()
-            + super.toString();
+    return super.toString() +
+            "\nNumero de Habitaciones: " + this.getHabitaciones();
     }
 }
