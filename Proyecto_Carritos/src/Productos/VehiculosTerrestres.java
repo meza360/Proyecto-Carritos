@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Productos;
-
+import java.util.*;
 /**
  *
  * @author giovani
@@ -17,9 +17,9 @@ public class VehiculosTerrestres extends SuperVehiculos{
     this.shelbyCobra69();
     }
     public void imprimirTodosTerrestres(){
-    System.out.println(arreglo[0]);
-    System.out.println(arreglo[1]);
-    System.out.println(arreglo[2]);
+    System.out.println("\n\tSeleccionar Vehiculo(1)\n"+arreglo[0]);
+    System.out.println("\n\tSeleccionar Vehiculo(2)\n"+arreglo[1]);
+    System.out.println("\n\tSeleccionar Vehiculo(3)\n"+arreglo[2]);
     }
     
     private VehiculosTerrestres arreglo[] = new VehiculosTerrestres[3];
@@ -65,8 +65,13 @@ public class VehiculosTerrestres extends SuperVehiculos{
         arreglo[2].setAsientos(4);
         arreglo[2].setPrecio(80000);
     }
+    
     public VehiculosTerrestres getDodgeChallenger(){
     return arreglo[2];
+    }
+    
+    public VehiculosTerrestres selVehiculo(int a){
+    return arreglo[a-1];
     }
     
 }

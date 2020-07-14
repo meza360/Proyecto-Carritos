@@ -22,9 +22,9 @@ public class VehiculosAereos extends SuperVehiculos{
         this.cessnaTTx();
     }
     public void imprimeTodosAereos(){
-    System.out.println(this.getCessnaSkycatcher());
-    System.out.println(this.getIconA5AmphibiousLightSport());
-    System.out.println(this.getCessnaTTx());
+    System.out.println("\n\tSeleccionar Vehiculo(1)\n" + arreglo[0]);
+    System.out.println("\n\tSeleccionar Vehiculo(2)\n" + arreglo[1]);
+    System.out.println("\n\tSeleccionar Vehiculo(3)\n" + arreglo[2]);
     }
     
     
@@ -71,5 +71,9 @@ public class VehiculosAereos extends SuperVehiculos{
       }
       public VehiculosAereos getCessnaTTx(){
       return arreglo[2];
+      }
+      
+      public VehiculosAereos selVehiculo(int a){
+      return arreglo[a-1];
       }
 }

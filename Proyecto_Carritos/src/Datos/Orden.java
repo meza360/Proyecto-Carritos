@@ -36,9 +36,13 @@ public class Orden{
     
     public SuperVehiculos getOrder(){
         try{
-         if (cont >= 0) {
+            if (cont == 0) {
+                System.out.println("\nCarrito de compras vacio\nRegresando al menu principal\n\n\n\n\n\n");
+                return null;
+            }
+            else if (cont >= 0) {
              cont--;
-            System.out.println(orden[cont]);
+            System.out.println(cont + "\n" + orden[cont]);
             
             return getOrder();      
         } 
@@ -50,16 +54,24 @@ public class Orden{
         }  
     }
     
+    public boolean removeItem(int a) throws ArrayIndexOutOfBoundsException{
+        orden[a-1] = null;
+        cont-=1;
+        if (orden[a-1] == null) {
+        return true;    
+        }
+        else
+            return false;
+    }
+    
      public void getFactura(){
         try{
             for(SuperVehiculos producto:orden){
                 if(producto != null)
                 FF.agregarFactura(producto);
             }
-        
         }catch(RuntimeException es){
-        
-        }  
+        }
     }
     
     @Override

@@ -29,9 +29,9 @@ public class VehiculosMaritimos extends SuperVehiculos{
     }
     
     public void imprimirTodosMaritimos(){
-    System.out.println(arreglo[0]);
-    System.out.println(arreglo[1]);
-    System.out.println(arreglo[2]);
+    System.out.println("\n\tSeleccionar Vehiculo(1)\n"+arreglo[0]);
+    System.out.println("\n\tSeleccionar Vehiculo(2)\n"+arreglo[1]);
+    System.out.println("\n\tSeleccionar Vehiculo(3)\n"+arreglo[2]);
     }
     
     protected void benetti122(){
@@ -80,6 +80,10 @@ public class VehiculosMaritimos extends SuperVehiculos{
     }
     public VehiculosMaritimos getPrincess30m(){
     return arreglo[2];
+    }
+    
+    public VehiculosMaritimos selVehiculo(int a){
+    return arreglo[a-1];
     }
     
     @Override
