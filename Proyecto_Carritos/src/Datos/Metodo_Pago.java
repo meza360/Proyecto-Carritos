@@ -17,32 +17,11 @@
  * under the License.
  */
 package Datos;
-import java.io.*;
-import Productos.SuperVehiculos;
+
 /**
  *
- * @author giovani
+ * @author giova
  */
-public class Factura {
-    private final String RUTA; 
-    public Factura(){
-    this.RUTA = ".\\dist\\orden.txt";
-    }
-    
-    public void agregarFactura(SuperVehiculos... vehiculo){
-        
-        try{
-        File archivo = new File(RUTA);
-        PrintWriter salida = new PrintWriter(new FileWriter(archivo,true));
-        for(SuperVehiculos producto:vehiculo){
-        salida.print("\n"+producto);
-        }
-        salida.close();
-        
-        }catch(IOException ex){
-        ex.printStackTrace();
-        }
-    
-    }
+public class Metodo_Pago {
     
 }
