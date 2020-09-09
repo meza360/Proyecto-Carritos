@@ -21,6 +21,7 @@ import Productos.SuperVehiculos;
 import Productos.VehiculosAereos;
 import Productos.VehiculosMaritimos;
 import Datos.*;
+import java.io.IOException;
 /**
 * @author GIOVANI DAVID MEZA POGGIO CARNÉ 5990-18-14676
  * @author Wendy Pricila Cifuentes Lutin CARNÉ 5990-18-4413
@@ -31,11 +32,13 @@ public class Orden{
     private SuperVehiculos orden[] = new SuperVehiculos[9];
     protected int cont = 0;
     protected int cont2 = 1;
+    private double total;
     
     public void addToOrder(SuperVehiculos vehiculo){
         try{
         if (cont != 8) {
-        orden[cont] = vehiculo;    
+        orden[cont] = vehiculo;
+        FF.setTotal(vehiculo.getPrecio());
         ++cont;
         }
         else{
@@ -67,7 +70,7 @@ public class Orden{
         }  
     }
     
-    public boolean removeItem(int a) throws ArrayIndexOutOfBoundsException{
+    public boolean removeItem(int a){
         orden[a-1] = null;
         cont-=1;
         if (orden[a-1] == null) {
@@ -77,7 +80,7 @@ public class Orden{
             return false;
     }
     
-     public void getFactura(){
+     public void getFactura() throws IOException{
         try{
             for(SuperVehiculos producto:orden){
                 if(producto != null)

@@ -74,7 +74,7 @@ public class VehiculosMaritimos extends SuperVehiculos{
         arreglo[1].setPuertas(6);
         arreglo[1].setAsientos(100);
         arreglo[1].setHabitaciones(6);
-        arreglo[1].setPrecio(10800000);
+        arreglo[1].setPrecio(1080000);
     }
     public VehiculosMaritimos getSunSeekere116(){
     return arreglo[1];

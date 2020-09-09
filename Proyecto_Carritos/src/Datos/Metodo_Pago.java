@@ -22,6 +22,17 @@ package Datos;
  * @author GIOVANI DAVID MEZA POGGIO CARNÉ 5990-18-14676
  * @author Wendy Pricila Cifuentes Lutin CARNÉ 5990-18-4413
  */
-public class Metodo_Pago {
+public abstract class Metodo_Pago {
+    private int opcionPago,cuota3,cuota6,cuota12,total,subtotal; 
     
+    public Metodo_Pago(){
+    this.total = 0;
+    this.subtotal = 0;
+    this.opcionPago = 0;
+    this.cuota3 = 0;
+    this.cuota6 = 0;
+    this.cuota12 = 0;
+    }
+    
+    public abstract void menuPago(double total);
 }

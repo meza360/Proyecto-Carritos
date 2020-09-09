@@ -23,6 +23,7 @@ import Productos.SuperVehiculos;
 import Productos.VehiculosMaritimos;
 import Productos.VehiculosTerrestres;
 import Datos.*;
+import java.io.IOException;
 /**
  *
 * @author GIOVANI DAVID MEZA POGGIO CARNÉ 5990-18-14676
@@ -36,8 +37,8 @@ public static void clearScreen() {
     System.out.flush();  
    }
 
-    public static void main(String[] args){
-  
+    public static void main(String[] args) throws IOException{
+        Orden OO = new Orden();
         Factura FF = new Factura();
         Clientes CC = new Clientes();
         Scanner input = new Scanner(System.in);
@@ -194,12 +195,12 @@ public static void clearScreen() {
             CC.setTelefono(input.nextInt());
             System.out.println("\tIngrese NIT para el cliente(opcional)\n");
             CC.setNIT(input.nextInt());
-                 System.out.println("Datos a imprimir en la factura: \n");
-                 System.out.println(CC);
-                 System.out.println("");
+            System.out.println("Datos a imprimir en la factura: \n");     
+            System.out.println(CC);
             FF.agregarCliente(CC);
             DD.getFactura();
             System.out.println("Factura impresa! Revise el archivo.");
+            break;
         }catch(RuntimeException ex){
         ex.printStackTrace();
         }
