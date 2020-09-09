@@ -19,8 +19,8 @@
 package Productos;
 
 /**
- *
- * @author giovani
+* @author GIOVANI DAVID MEZA POGGIO CARNÉ 5990-18-14676
+ * @author Wendy Pricila Cifuentes Lutin CARNÉ 5990-18-4413
  */
 public class SuperVehiculos {
     private int cc;

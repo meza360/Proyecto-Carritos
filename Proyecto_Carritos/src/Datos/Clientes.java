@@ -20,7 +20,8 @@ package Datos;
 
 /**
  *
- * @author giovani
+ * @author GIOVANI DAVID MEZA POGGIO CARNÉ 5990-18-14676
+ * @author Wendy Pricila Cifuentes Lutin CARNÉ 5990-18-4413
  */
 public class Clientes {
     //
@@ -64,6 +65,7 @@ public class Clientes {
     public int getTelefono(){
     return telefono;
     }
+
     /**
     *toString method has been override 
     *so there's no need to make extra parse on info

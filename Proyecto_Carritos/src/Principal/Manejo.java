@@ -25,8 +25,8 @@ import Productos.VehiculosTerrestres;
 import Datos.*;
 /**
  *
- * @author giovani
- * @version 1.0 
+* @author GIOVANI DAVID MEZA POGGIO CARNÉ 5990-18-14676
+ * @author Wendy Pricila Cifuentes Lutin CARNÉ 5990-18-4413
  */
 public class Manejo {
     
@@ -41,7 +41,7 @@ public static void clearScreen() {
         Factura FF = new Factura();
         Clientes CC = new Clientes();
         Scanner input = new Scanner(System.in);
-        int op = 1,op2 = 1,op3;
+        int op = 1,op2 = 1,op3,op4 = 0;
        
     VehiculosAereos AA = new VehiculosAereos();
     AA.inicializador();
@@ -157,7 +157,7 @@ public static void clearScreen() {
             }
             }
             break;
-        case 2: 
+        case 2: //opcion 2 del menu principal
             System.out.println("\n\n\n");
                 DD.getOrder();
                 System.out.println("1. Eliminar un vehiculo del carrito");
@@ -181,8 +181,29 @@ public static void clearScreen() {
                 }
                 
 
-        case 3: break;
-        case 4: break;
+        case 3://opcion 3 del menu principal
+             try{
+            System.out.println("\n\n\t\t\tPor favor, ingrese los datos del cliente:\n");
+            System.out.println("\tIngrese el nombre completo: \n");
+            input.nextLine();
+            CC.setNombre(input.nextLine());
+            System.out.println("\t\tPresione ENTER una vez mas por favor");
+            System.out.println("\tIngrese ciudad para la factura: \n");
+            CC.setLugar(input.nextLine());
+            System.out.println("\tIngrese el numero de telefono del cliente: \n");
+            CC.setTelefono(input.nextInt());
+            System.out.println("\tIngrese NIT para el cliente(opcional)\n");
+            CC.setNIT(input.nextInt());
+                 System.out.println("Datos a imprimir en la factura: \n");
+                 System.out.println(CC);
+                 System.out.println("");
+            FF.agregarCliente(CC);
+            DD.getFactura();
+            System.out.println("Factura impresa! Revise el archivo.");
+        }catch(RuntimeException ex){
+        ex.printStackTrace();
+        }
+            break;
     }
             
         }
@@ -192,15 +213,5 @@ public static void clearScreen() {
     
        
     }//fin del ciclo infinito
-    
-    
-    
-    
-    
-    try{
-        DD.getFactura();
-    }catch(RuntimeException ex){
-    ex.printStackTrace();
-    }
     }
 }
