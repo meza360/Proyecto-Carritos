@@ -22,8 +22,9 @@ import java.util.Scanner;
 import Productos.SuperVehiculos;
 /**
  *
- * @author GIOVANI DAVID MEZA POGGIO CARNÉ 5990-18-14676
- * @author Wendy Pricila Cifuentes Lutin CARNÉ 5990-18-4413
+  * @author GIOVANI DAVID MEZA POGGIO CARNÉ 5990-18-14676 SECCION A
+ * @author Wendy Pricila Cifuentes Lutin CARNÉ 5990-18-4413 SECCION A
+ * @author Flor Eunice Garcia Ajquil CARNÉ 5990-18-9172 SECCION A
  */
 public class Factura extends Metodo_Pago{
     private Scanner input = new Scanner(System.in);
