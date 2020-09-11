@@ -48,6 +48,7 @@ public class VehiculosTerrestres extends SuperVehiculos{
         arreglo[0].setPuertas(2);
         arreglo[0].setAsientos(5);
         arreglo[0].setPrecio(88000);
+        arreglo[0].setDisponibles(22);
     }
     public VehiculosTerrestres getCamaroSS(){
     return arreglo[0];
@@ -63,6 +64,7 @@ public class VehiculosTerrestres extends SuperVehiculos{
         arreglo[1].setPuertas(2);
         arreglo[1].setAsientos(2);
         arreglo[1].setPrecio(150000);
+        arreglo[1].setDisponibles(32);
     }
     public VehiculosTerrestres getShelbyCobra69(){
     return arreglo[1];
@@ -78,6 +80,7 @@ public class VehiculosTerrestres extends SuperVehiculos{
         arreglo[2].setPuertas(2);
         arreglo[2].setAsientos(4);
         arreglo[2].setPrecio(80000);
+        arreglo[2].setDisponibles(4);
     }
     
     public VehiculosTerrestres getDodgeChallenger(){

@@ -52,6 +52,7 @@ public class VehiculosAereos extends SuperVehiculos{
         arreglo[0].setPuertas(2);
         arreglo[0].setAsientos(100);
         arreglo[0].setPrecio(250000);
+        arreglo[0].setDisponibles(20);
     }   
       public VehiculosAereos getIconA5AmphibiousLightSport(){
       return (arreglo[0]);
@@ -67,6 +68,7 @@ public class VehiculosAereos extends SuperVehiculos{
         arreglo[1].setPuertas(2);
         arreglo[1].setAsientos(6);
         arreglo[1].setPrecio(150000);
+        arreglo[1].setDisponibles(15);
       }
       public VehiculosAereos getCessnaSkycatcher(){
       return arreglo[1];
@@ -82,6 +84,7 @@ public class VehiculosAereos extends SuperVehiculos{
         arreglo[2].setPuertas(1);
         arreglo[2].setAsientos(6);
         arreglo[2].setPrecio(189000);
+        arreglo[2].setDisponibles(6);
       }
       public VehiculosAereos getCessnaTTx(){
       return arreglo[2];

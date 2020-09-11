@@ -59,6 +59,7 @@ public class VehiculosMaritimos extends SuperVehiculos{
         arreglo[0].setAsientos(100);
         arreglo[0].setHabitaciones(4);
         arreglo[0].setPrecio(9500000);
+        arreglo[0].setDisponibles(12);
     }
     public VehiculosMaritimos getBenetti122(){
     return arreglo[0];
@@ -75,6 +76,7 @@ public class VehiculosMaritimos extends SuperVehiculos{
         arreglo[1].setAsientos(100);
         arreglo[1].setHabitaciones(6);
         arreglo[1].setPrecio(1080000);
+        arreglo[1].setDisponibles(6);
     }
     public VehiculosMaritimos getSunSeekere116(){
     return arreglo[1];
@@ -91,6 +93,7 @@ public class VehiculosMaritimos extends SuperVehiculos{
         arreglo[2].setAsientos(120);
         arreglo[2].setHabitaciones(8);
         arreglo[2].setPrecio(7500000);
+        arreglo[2].setDisponibles(9);
     }
     public VehiculosMaritimos getPrincess30m(){
     return arreglo[2];

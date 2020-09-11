@@ -103,9 +103,15 @@ public static void clearScreen() {
                             }
                         }
                         else{
+                            if (op2 == 0) {
+                                break;
+                            }
+                            else{
                             DD.addToOrder(TT.selVehiculo(op2)); 
                             System.out.println("Vehiculo " + TT.selVehiculo(op2).getNombre() + " agregado a la orden");
+                            op2 = 1;
                             break;
+                            }
                         }
                     
                     }catch(RuntimeException error){ error.printStackTrace();break;}
@@ -124,14 +130,20 @@ public static void clearScreen() {
                             }
                         }
                         else{
+                            if (op2 == 0) {
+                                break;
+                            }
+                            else{
                             DD.addToOrder(MM.selVehiculo(op2)); 
                             System.out.println("Vehiculo " + MM.selVehiculo(op2).getNombre() + " agregado a la orden");
+                            op2 = 1;
                             break;
+                            }
                         }
                     
                     }catch(RuntimeException error){ error.printStackTrace();break;}
                     
-                case 3: 
+                case 3: //opcion 3 del menu de vehiculos
                     clearScreen();
                     System.out.println("0. Seleccione 0 para regresar al menu de vehiculos.");
                     System.out.println("Selecciones el vehiculo deseado(1, 2, 3): \n\n");
@@ -145,9 +157,15 @@ public static void clearScreen() {
                             }
                         }
                         else{
+                            if (op2 == 0) {
+                                break;
+                            }
+                            else{
                             DD.addToOrder(AA.selVehiculo(op2)); 
                             System.out.println("Vehiculo " + AA.selVehiculo(op2).getNombre() + " agregado a la orden");
+                            op2 = 1;
                             break;
+                            }
                         }
                     
                     }catch(RuntimeException error){ error.printStackTrace();break;}
@@ -155,6 +173,7 @@ public static void clearScreen() {
             }
             }catch(RuntimeException error){
             error.printStackTrace();
+            break;
             }
             }
             break;
@@ -164,23 +183,29 @@ public static void clearScreen() {
                 System.out.println("1. Eliminar un vehiculo del carrito");
                 System.out.println("0. Regresar al menu anterior");
                 op2 = input.nextInt();
-                if(op2 == 1){
                 try{
+                if (op2<0 || op2>3) {
+                            while(op2<0 || op2>3){
+                            System.out.println("Opcion no valida, intente de nuevo");
+                            op2 = input.nextInt();
+                            }
+                        }
+                        
+                else if (op2 == 0) {
+                break;
+                }
+                else if(op2 == 1){
                     System.out.println("Seleccione el vehiculo a remover: \n");
                     op3 = input.nextInt();
                 if(DD.removeItem(op3)){
                 System.out.println("Elemento Removido de la order\n");
                 DD.getOrder();
-                }
-                else
+                break;
+                }}
+                else{
                     System.out.println("Error###Eleemento no encontrado\n");
-                break;
-                }catch(RuntimeException error){
-                error.printStackTrace();
-                break;
-                }
-                }
-                
+                break;}
+                }catch(RuntimeException error){error.printStackTrace();break;}
 
         case 3://opcion 3 del menu principal
              try{
@@ -203,6 +228,7 @@ public static void clearScreen() {
             break;
         }catch(RuntimeException ex){
         ex.printStackTrace();
+     
         }
             break;
     }

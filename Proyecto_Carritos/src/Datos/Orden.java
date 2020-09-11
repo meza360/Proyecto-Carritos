@@ -38,6 +38,7 @@ public class Orden{
         try{
         if (cont != 8) {
         orden[cont] = vehiculo;
+        vehiculo.setDisponibles(vehiculo.getDisponibles() - 1);
         FF.setTotal(vehiculo.getPrecio());
         ++cont;
         }
@@ -53,7 +54,7 @@ public class Orden{
     public SuperVehiculos getOrder(){
         try{
             if (cont == 0) {
-                System.out.println("\nCarrito de compras vacio\nRegresando al menu principal\n\n\n\n\n\n");
+                System.out.println("\nCarrito de compras vacio o listado completamente\n\n\n");
                 return null;
             }
             else if (cont >= 0) {
@@ -71,13 +72,21 @@ public class Orden{
     }
     
     public boolean removeItem(int a){
+        if (a == 0) {
+            orden[a] = null;
+            return true;
+        }
+        else{
         orden[a-1] = null;
         cont-=1;
-        if (orden[a-1] == null) {
-        return true;    
+        for (int i = 0; i < 8; i++) {
+            if (orden[i] == null && orden[i+1] !=null) {
+                orden[i] = orden[i+1];
+                orden[i+1] = null;
+            }
         }
-        else
-            return false;
+        return true;
+        }
     }
     
      public void getFactura() throws IOException{
