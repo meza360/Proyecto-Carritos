@@ -31,6 +31,7 @@ public class SuperVehiculos {
     private String nombre;
     private float tanque;
     private int asientos;
+    private int disponibles;
     
     public SuperVehiculos()
     {
@@ -93,6 +94,14 @@ public class SuperVehiculos {
     public int getAsientos(){
     return this.asientos;
     }
+
+    public int getDisponibles() {
+        return disponibles;
+    }
+
+    public void setDisponibles(int disponibles) {
+        this.disponibles = disponibles;
+    }
     
     @Override
     public String toString(){
@@ -104,6 +113,7 @@ public class SuperVehiculos {
             + "\nTamaño del tanque(Galones): " + getCapacidad() 
             + "\nNumero de puertas: " + getPuertas()
             + "\nNumero de asientos: " + getAsientos()
-            + "\nPrecio: (Dolares)" + getPrecio();
+            + "\nPrecio: (Dolares)" + getPrecio()
+            + "\nDisponibles: " + getDisponibles();
     }
 }

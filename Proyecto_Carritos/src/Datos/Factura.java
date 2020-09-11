@@ -27,7 +27,7 @@ import Productos.SuperVehiculos;
  */
 public class Factura extends Metodo_Pago{
     private Scanner input = new Scanner(System.in);
-    private final String RUTA; 
+    private String RUTA; 
     private int opcionPago;
     private double subtotal,total;
     public Factura(){
@@ -44,7 +44,6 @@ public class Factura extends Metodo_Pago{
     
     
     public void agregarCliente(Clientes cliente){
-    
         try{
         File archivo = new File(RUTA);
         PrintWriter salida = new PrintWriter(new FileWriter(archivo,true));
