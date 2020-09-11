@@ -106,7 +106,7 @@ public class SuperVehiculos {
     @Override
     public String toString(){
     
-    return "\nVehiculo: " + getNombre() 
+    return "------------ Vehiculo:" + getNombre()+ " -----------" 
             + "\nCentimetros Cubicos: " + getCC() 
             + "\nNumero de Cilindros: " + getCilindros() 
             + "\nTipo de combustible: " + getCombustible() 
@@ -114,6 +114,7 @@ public class SuperVehiculos {
             + "\nNumero de puertas: " + getPuertas()
             + "\nNumero de asientos: " + getAsientos()
             + "\nPrecio: (Dolares)" + getPrecio()
-            + "\nDisponibles: " + getDisponibles();
+            + "\nDisponibles: " + getDisponibles()
+            +  "\n-----------------------------------------------";
     }
 }

@@ -27,8 +27,8 @@ public class Clientes {
     //
     private String nombre;
     private String lugar;
-    private int nit;
-    private int telefono;
+    private String nit;
+    private String telefono;
     //constructor 
     public Clientes(){
     this.nombre = nombre;
@@ -51,18 +51,18 @@ public class Clientes {
     return lugar;
     }
     
-    public void setNIT(int nit){
+    public void setNIT(String nit){
     this.nit = nit;
     }
     
-    public int getNIT(){
+    public String getNIT(){
     return nit;
     }
     
-    public void setTelefono(int Telefono){
+    public void setTelefono(String Telefono){
     this.telefono = Telefono;
     }
-    public int getTelefono(){
+    public String getTelefono(){
     return telefono;
     }
 

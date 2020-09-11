@@ -57,11 +57,12 @@ public static void clearScreen() {
    //inicio del ciclo infinito 
   while(op != 0){
     clearScreen();
-    System.out.println("\t\tBienvenido");
-    System.out.println("1. Ver el menu de vehiculos");
-    System.out.println("2. Ver el carrito de compras");
-    System.out.println("3. Completar compra");
-    System.out.println("0. Salir del programa");
+    System.out.println("------------Bienvenido------------");
+    System.out.println("|  1. Ver el menu de vehiculos    |");
+    System.out.println("|  2. Ver el carrito de compras   |");
+    System.out.println("|  3. Completar compra            |");
+    System.out.println("|  0. Salir del programa          |");
+    System.out.println("----------------------------------");
     try{
     op = input.nextInt();
         if (op <0 || op >3) {
@@ -213,13 +214,13 @@ public static void clearScreen() {
             System.out.println("\tIngrese el nombre completo: \n");
             input.nextLine();
             CC.setNombre(input.nextLine());
-            System.out.println("\t\tPresione ENTER una vez mas por favor");
+            //System.out.println("\t\tPresione ENTER una vez mas por favor");
             System.out.println("\tIngrese ciudad para la factura: \n");
             CC.setLugar(input.nextLine());
             System.out.println("\tIngrese el numero de telefono del cliente: \n");
-            CC.setTelefono(input.nextInt());
+            CC.setTelefono(input.nextLine());
             System.out.println("\tIngrese NIT para el cliente(opcional)\n");
-            CC.setNIT(input.nextInt());
+            CC.setNIT(input.nextLine());
             System.out.println("Datos a imprimir en la factura: \n");     
             System.out.println(CC);
             FF.agregarCliente(CC);
